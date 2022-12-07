@@ -1,0 +1,55 @@
+
+.about {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    color: white;
+  }
+  
+  .about__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    color: white;
+  }
+  .card {
+    color: black;
+    margin-bottom: 1rem;
+    border-radius: 25px !important;
+    padding: 1rem;
+  }
+  
+
+  /* skill */
+.skills-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill__image{
+  height: 3rem;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .about {
+        background-color: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+      }
+      .about__box {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+      }
+      .card {
+        color: black;
+        margin-bottom: 1rem;
+        border-radius: 25px !important;
+        padding: 1rem;
+      }
+
+}

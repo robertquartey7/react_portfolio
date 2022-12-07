@@ -1,0 +1,19 @@
+.footer {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+
+.footer__socials {
+  display: none;
+  transition: display 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 769px) {
+  .footer__socials {
+    display: block;
+    transition: display 0.5s ease-in-out;
+  }
+}

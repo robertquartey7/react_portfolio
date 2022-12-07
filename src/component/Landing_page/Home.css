@@ -1,0 +1,43 @@
+
+.home__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 70vh;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+  color: white;
+  padding: 0 1.5rem !important;
+}
+.home__text {
+  font-size: larger;
+}
+.home__box h1 {
+  font-weight: bolder;
+  font-size: 4rem;
+}
+.home__interest {
+  color: rgb(73, 74, 74);
+  width: 50vw;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.home__linkedin {
+  width: fit-content;
+  padding: 1rem;
+  font-size: larger;
+}
+/* .love{
+  max-width: 600px;
+} */
+
+@media screen and (max-width: 769px) {
+
+    .home__box{
+        min-height: 100vh;
+        
+    }
+}

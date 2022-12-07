@@ -1,0 +1,50 @@
+.logo__image {
+  width: 12rem !important;
+  height: 12rem !important;
+  margin-top: 1rem;
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+.socials a > i {
+  font-size: xx-large;
+}
+.navbar__menulinks{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nav__body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.top__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav__name{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav__name {
+    margin: auto;
+
+  }
+  .nav__body {
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
