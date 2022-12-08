@@ -7,7 +7,7 @@ function Projects() {
     <div id="projects" className="min__height">
       <h1 className="">Some Things I've Built </h1>
       <div>Web Apps</div>
-      <div className="project">{ProjectJson.map((element, index) => {
+      <div className="project container">{ProjectJson.map((element, index) => {
 
         return (
           <ProjectCard

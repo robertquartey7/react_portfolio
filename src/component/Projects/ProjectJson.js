@@ -1,5 +1,8 @@
 import movieapp from '../../assets/images/projects/movieapp1.gif'
 import colorGram from '../../assets/images/projects/color-gram.gif'
+
+
+
 export  const ProjectJson = [
     {
         title:'Movie App',

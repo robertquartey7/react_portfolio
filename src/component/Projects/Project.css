@@ -1,0 +1,35 @@
+.project {
+  display: flex;
+  gap: 2rem;
+}
+
+.project__card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  position: relative;
+
+ 
+}
+.project__img__box {
+  width: 100%;
+}
+
+.project__img__box img {
+  height: 100%;
+}
+
+.project__links {
+  display: none !important;
+}
+.blur{
+    filter: blur(2px) ;
+
+}
+.project__links__hover {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+z-index: 10 !important;
+}
