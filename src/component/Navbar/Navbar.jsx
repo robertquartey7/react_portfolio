@@ -3,9 +3,16 @@ import { Link } from "react-scroll";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
 import { Avatar } from "@mui/material";
+import { list, item } from "../Landing_page/Home";
+import { motion } from "framer-motion";
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <motion.nav
+      class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"
+      variants={list}
+      initial="hidden"
+      animate="visible"
+    >
       <button
         class="navbar-toggler ml-5"
         type="button"
@@ -17,21 +24,28 @@ function Navbar() {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <h1 className="nav__name text__white">Robert Quartey</h1>
+      <motion.h1 variants={item} className="nav__name text__white">
+        Robert Quartey
+      </motion.h1>
       <div
         class="collapse navbar-collapse nav__body"
         id="navbarSupportedContent"
       >
         {/* top section of the navbar */}
-        <div className="top__nav container">
-          <a class="navbar-brand" href="#">
+        <motion.div
+          variants={list}
+          className="top__nav container"
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.a variant={item} class="navbar-brand" href="#">
             <img src={logo} alt="" class="logo__image" data-tilt />
-          </a>
-          <p className="text__white text-center">
+          </motion.a>
+          <motion.p variants={item} className="text__white text-center">
             Hi, my name is Robert Quartey and I'm a senior software engineer.
             Welcome to my personal website!
-          </p>
-          <div class="socials">
+          </motion.p>
+          <motion.div variants={item} class="socials">
             <a
               href="https://www.instagram.com/mccall.robert36/"
               target="_blank"
@@ -47,10 +61,10 @@ function Navbar() {
             >
               <i class="bi bi-linkedin text-white"></i>
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className="hr"></div>
-        <div class="navbar__menulinks ">
+        <motion.div variants={item} class="navbar__menulinks ">
           <Link class="" to="home" spy={true} smooth={true}>
             Home
           </Link>
@@ -66,9 +80,9 @@ function Navbar() {
           <Link class="" to="contact" spy={true} smooth={true}>
             Contact
           </Link>
-        </div>
+        </motion.div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

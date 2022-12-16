@@ -1,35 +1,18 @@
 .project {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
+  justify-content: space-around;
 }
 
 .project__card {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  position: relative;
-
- 
-}
-.project__img__box {
-  width: 100%;
+  width: 20rem;
+  border: solid 1px white;
 }
 
-.project__img__box img {
-  height: 100%;
-}
-
-.project__links {
-  display: none !important;
-}
-.blur{
-    filter: blur(2px) ;
-
-}
-.project__links__hover {
+.project__social{
   display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%);
-z-index: 10 !important;
+  gap: 1rem;
+
 }

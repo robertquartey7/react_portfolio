@@ -12,53 +12,45 @@ function Skills() {
   const skills = [
     {
       imageURL: css3,
-      title: "lorem",
-      description:
-        "CSS describes how HTML elements are to be displayed on screen.",
-      progressBar: 80,
+      name: "Css3",
+    
     },
     {
       imageURL: django,
-      title: "Django",
-      description: "lorem dhf dnsdf sdg sfgs g sgiwr rnw t",
-      progressBar: 20,
+      name: "Django",
+  
     },
     {
       imageURL: flask,
-      title: "Flask",
-      description: "lorem dhf dnsdf sdg sfgs g sgiwr rnw t",
-      progressBar: 60,
+      name: "Flask",
+     
     },
     {
       imageURL: python,
-      title: "Python",
-      description: "lorem dhf dnsdf sdg sfgs g sgiwr rnw t",
-      progressBar: 70,
+      name: "Python",
+     
     },
     {
       imageURL: javascript,
-      title: "Javascript",
-      description: "lorem dhf dnsdf sdg sfgs g sgiwr rnw t",
-      progressBar: 70,
+      name: "Javascript",
+     
     },
     {
       imageURL: react,
-      title: "React",
-      description: "lorem dhf dnsdf sdg sfgs g sgiwr rnw t",
-      progressBar: 80,
+      name: "React",
+    
     },
   ];
 
   return (
-    <div className="skill-box container row gap-3">
+    <div className="skills-box container row gap-3">
       {skills.map((element, index) => (
         <Skill_card
           
           key={index}
           imageURL={element.imageURL}
-          title={element.title}
-          description={element.description}
-          progressBar={element.progressBar}
+          name={element.name}
+        
         />
       ))}
     </div>

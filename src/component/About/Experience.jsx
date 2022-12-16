@@ -1,9 +1,11 @@
 import React from "react";
 import Experience_card from "./Experience_card";
-import TTP from '../../assets/images/TTP.png'
-import vngle from '../../assets/images/vngle.png'
-
+import TTP from "../../assets/images/TTP.png";
+import vngle from "../../assets/images/vngle.png";
+import { motion } from "framer-motion";
+import { list, item } from "../Landing_page/Home";
 function Experience() {
+  
   const experience = [
     {
       title: "Software Engineer Intern at Vngle",
@@ -20,22 +22,30 @@ function Experience() {
       imageURL: TTP,
     },
   ];
- 
+
   return (
     <div>
       <div className="experience__box">
         <h1 className="experience__title">Experience</h1>
-        <div className="experience__card">
+        <motion.div
+          className="experience__card"
+          variants={list}
+          initial="hidden"
+          animate="visible"
+        >
           {experience.map((element) => (
-            <Experience_card
-              key={element.title}
-              title={element.title}
-              date={element.date}
-              imageURL={element.imageURL}
-              details={element.details}
-            />
+            <motion.div variants={item}>
+              {" "}
+              <Experience_card
+                key={element.title}
+                title={element.title}
+                date={element.date}
+                imageURL={element.imageURL}
+                details={element.details}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

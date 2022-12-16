@@ -23,14 +23,23 @@
   
 
   /* skill */
-.skills-box{
-  display: flex;
-  flex-wrap: wrap;
-}
-.skill__image{
-  height: 3rem;
+  .skills{
+    margin:  5rem 0;
+    
+  }
+  .skills__box{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-}
+  }
+  .skills__card{
+    width: 7.5rem;
+    height: auto;
+
+  }
+
 
 @media screen and (min-width: 768px) {
 

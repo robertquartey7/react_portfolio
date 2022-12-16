@@ -1,24 +1,26 @@
-import { GitHub } from "@mui/icons-material";
-import { useState } from "react";
+import { GitHub, OpenInNew } from "@mui/icons-material";
 
-function ProjectCard({ title, description, imageLink, githubLink }) {
-   const [onHover, setOnHover ] = useState(false)
+function ProjectCard({ title, description, imageLink, githubLink, liveLink }) {
   return (
-    <div  className={onHover ?"bg__cardcolor project__card blur" : "bg__cardcolor project__card"} onMouseOut={()=>setOnHover(false)} onMouseOver={()=>setOnHover(true)}>
+    <div className={"bg__cardcolor project__card"}>
       <div className="project__img__box">
         <img src={imageLink} alt="" className="img-fluid" />
       </div>
-      <div className="p-4">
+      <div className="">
         <h3>{title}</h3>
         <p>{description}</p>
+        <div className="project__social container">
+          <a href={githubLink} target="_blank">
+            <GitHub />
+          </a>
+          {liveLink && (
+            <a href={""} target="_blank">
+              <OpenInNew />
+            </a>
+          )}
+        </div>
       </div>
-      <div className={onHover? "btn btn-dark d-flex gap-1 project__links__hover": "project__links btn btn-dark d-flex gap-1 "}>
-      <GitHub/>
-      <a href={githubLink} >githubLink</a>
-      </div>
-
     </div>
-    
   );
 }
 

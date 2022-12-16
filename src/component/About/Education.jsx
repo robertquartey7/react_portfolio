@@ -1,6 +1,8 @@
 import React from "react";
 import Experience_card from "./Experience_card";
 import jjay from "../../assets/images/jjay.jpeg";
+import { motion } from "framer-motion";
+import { list, item } from "../Landing_page/Home";
 function Education() {
   const education = [
     {
@@ -13,19 +15,26 @@ function Education() {
 
   return (
     <div>
-      <div className="education__card">
+      <motion.div
+        className="education__card"
+        variants={list}
+        initial="hidden"
+        animate="visible"
+      >
         {education.map((element) => {
           return (
-            <Experience_card
-              key={element.title}
-              title={element.title}
-              date={element.date}
-              imageURL={element.imageURL}
-              details={element.details}
-            />
+            <motion.div variants={item}>
+              <Experience_card
+                key={element.title}
+                title={element.title}
+                date={element.date}
+                imageURL={element.imageURL}
+                details={element.details}
+              />
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

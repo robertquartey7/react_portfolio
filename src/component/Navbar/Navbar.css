@@ -10,7 +10,7 @@
 .socials a > i {
   font-size: xx-large;
 }
-.navbar__menulinks{
+.navbar__menulinks {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -26,15 +26,14 @@
   flex-direction: column;
   align-items: center;
 }
-.nav__name{
+.nav__name {
   display: none;
 }
-
 
 @media screen and (max-width: 768px) {
   .nav__name {
     margin: auto;
-
+    display: block;
   }
   .nav__body {
     height: 94vh;
